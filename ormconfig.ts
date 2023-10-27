@@ -16,7 +16,7 @@ const createConnectionOptions: TypeOrmModuleOptions = {
   logging: ['development'].includes(currentEnv) ? true : ['error'],
   synchronize: true,
   migrationsRun: true,
-  entities: ['dist/src/**/*.entity.js'],
+  entities: ['dist/src/**/*.entity.{js,ts}'],
   migrations: ['dist/src/database/migrations/*.{js,ts}'],
   cli: {
     migrationsDir: ['production', 'staging'].includes(currentEnv)

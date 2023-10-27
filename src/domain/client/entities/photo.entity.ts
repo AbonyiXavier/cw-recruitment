@@ -6,12 +6,12 @@ import { User } from './user.entity';
 @Entity(TABLES.photo)
 export class Photo extends BaseEntity {
   @Column()
-  Name: string;
+  name: string;
 
   @Column()
-  Url: string;
+  url: string;
 
   @ManyToOne(() => User, (user) => user.id)
-  @JoinColumn({ name: 'User_Id' })
-  User: User;
+  @JoinColumn({ name: 'user_id' })
+  user: User;
 }

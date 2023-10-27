@@ -4,4 +4,9 @@ const TABLES = {
   photo: 'photo',
 };
 
-export { TABLES };
+enum UserRole {
+  Admin = 'Admin',
+  Client = 'Client',
+}
+
+export { TABLES, UserRole };

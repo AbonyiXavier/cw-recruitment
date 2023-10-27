@@ -16,23 +16,14 @@ async function bootstrap() {
 
     const configService = app.get(ConfigService);
     const PORT = configService.get('PORT');
-    const isProduction = configService.get<boolean>('isProduction');
 
     const getVersion = Math.floor(parseInt(version));
 
     app.setGlobalPrefix(`api/v${getVersion}`);
 
-    app.useGlobalPipes(
-      new ValidationPipe({
-        validationError: {
-          target: false,
-        },
-      }),
-    );
+    app.useGlobalPipes(new ValidationPipe({ transform: true }));
 
-    if (!isProduction) {
-      setupSwagger(app);
-    }
+    setupSwagger(app);
 
     await app.listen(PORT, () =>
       Logger.log(`Service is running at: http://localhost:${PORT}`),
