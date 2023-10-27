@@ -15,7 +15,7 @@ async function bootstrap() {
     const { version } = packageJson;
 
     const configService = app.get(ConfigService);
-    const PORT = configService.get('PORT');
+    const PORT = configService.get('PORT') || 3500;
 
     const getVersion = Math.floor(parseInt(version));
 
