@@ -84,6 +84,10 @@ Authenticated clients can retrieve their own data:
 
 - ![ER-Diagram](./docs/ER-Diagram.png)
 
+### Swagger Documentation image
+
+- ![Swagger docs image](./docs/swaggar-docs-image.png)
+
 
 
 # Getting Started
