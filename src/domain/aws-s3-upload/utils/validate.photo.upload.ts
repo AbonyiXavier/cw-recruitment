@@ -1,5 +1,5 @@
 import { BadRequestException } from '@nestjs/common';
-import { MIN_PHOTOS, VALID_FILE_TYPES } from './constant';
+import { MAX_PHOTOS, VALID_FILE_TYPES } from './constant';
 
 export const validatePhotoUploads = (photos: Express.Multer.File[]) => {
   const invalidFiles = photos.filter(
@@ -12,9 +12,7 @@ export const validatePhotoUploads = (photos: Express.Multer.File[]) => {
     );
   }
 
-  if (photos.length < 1) {
-    throw new BadRequestException(
-      `You can upload at least up to ${MIN_PHOTOS} photos.`,
-    );
+  if (photos.length > MAX_PHOTOS) {
+    throw new BadRequestException(`You can upload up to ${MAX_PHOTOS} photos.`);
   }
 };
