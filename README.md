@@ -151,6 +151,10 @@ How to run all tests locally
 
 - Postman documentation is available on [Postman Docs](https://documenter.getpostman.com/view/7775892/2s9YRGwoCa)
 
+## Recorded demonstration of how to test validations, error messages, API response of the project in postman or swagger docs.
+- [Screencastify Demo Link](https://watch.screencastify.com/v/CaOemjCJgkpSn41d4SXu) or 
+- [Google Drive Demo Link](https://drive.google.com/file/d/1SxVQBZCeMuSFxivH9pzmpsY43h1QvvGe/view)
+
 
 ### HTTP Response Codes
 
