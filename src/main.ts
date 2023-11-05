@@ -4,13 +4,20 @@ import { setupSwagger } from './swagger';
 import { ConfigService } from '@nestjs/config';
 
 import * as packageJson from 'package.json';
+import * as cookieParser from 'cookie-parser';
+
 import { Logger, ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
   try {
     const app = await NestFactory.create(AppModule);
 
-    app.enableCors();
+    app.enableCors({
+      credentials: true,
+      origin: process.env.FRONTEND_URL,
+    });
+
+    app.use(cookieParser());
 
     const { version } = packageJson;
 

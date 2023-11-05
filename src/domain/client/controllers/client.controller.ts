@@ -1,7 +1,6 @@
 import { Controller, Get, Request } from '@nestjs/common';
 import { ClientService } from '../services/client.service';
-import { ApiBearerAuth, ApiOkResponse } from '@nestjs/swagger';
-import { ApiTags } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiOkResponse, ApiTags } from '@nestjs/swagger';
 
 @ApiTags('Client APIs')
 @Controller('client')

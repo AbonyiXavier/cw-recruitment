@@ -13,12 +13,12 @@ import { UserRole } from '../../../../common/constant';
 export class SignUpInput {
   @ApiProperty({ required: true })
   @IsString()
-  @Length(2, 25, { message: 'first name must be between 2 and 25 characters!' })
+  @Length(2, 25, { message: 'First name must be between 2 and 25 characters!' })
   firstName: string;
 
   @ApiProperty({ required: true })
   @IsString()
-  @Length(2, 25, { message: 'last name must be between 2 and 25 characters!' })
+  @Length(2, 25, { message: 'Last name must be between 2 and 25 characters!' })
   lastName: string;
 
   @ApiProperty({ required: true })
